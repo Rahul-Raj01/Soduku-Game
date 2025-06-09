@@ -1,0 +1,100 @@
+:root {
+  --bg: #fff;
+  --text: #111;
+  --accent: #e50914;
+  --cell-bg: #f0f0f0;
+  --border: #999;
+}
+
+:has(#mode-toggle:checked) {
+  --bg: #111;
+  --text: #fff;
+  --accent: #e50914;
+  --cell-bg: #1e1e1e;
+  --border: #444;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  text-align: center;
+  padding: 2rem;
+}
+
+header {
+  margin-bottom: 1.5rem;
+}
+
+.icon {
+  width: 420px;
+  height: 120px;
+  object-fit: cover; 
+  display: block;
+  margin: 0 auto 0.5rem;
+}
+
+.subtitle {
+  font-style: italic;
+  margin-top: 0.5rem;
+}
+
+.theme-switch {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+#sudoku-board {
+  display: grid;
+  grid-template-columns: repeat(9, 40px);
+  gap: 2px;
+  justify-content: center;
+  margin: 1rem auto;
+}
+
+.cell {
+  width: 40px;
+  height: 40px;
+  font-size: 1.2rem;
+  text-align: center;
+  background-color: var(--cell-bg);
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+
+.prefilled {
+  font-weight: bold;
+  background-color: #ddd;
+  pointer-events: none;
+}
+
+.invalid {
+  background-color: #ffcccc !important;
+}
+
+.controls {
+  margin-top: 1rem;
+}
+
+button {
+  background-color: var(--accent);
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  margin: 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+#message {
+  margin-top: 1rem;
+  font-weight: bold;
+}

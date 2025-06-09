@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sudoku Game</title>
+  <link rel="stylesheet" href="style1.css" />
+</head>
+<body>
+
+  <!-- Dark Mode Toggle -->
+  <label class="theme-switch">
+    <input type="checkbox" id="mode-toggle" />
+    <span>🌙 Dark Mode</span>
+  </label>
+
+  <!-- Title Section -->
+  <header>
+    <img src="welcome.jpg" alt="Puzzle Icon" class="icon" />
+    <h1>Sudoku Game</h1>
+    <p class="subtitle">Fill the grid. Use logic. Win!</p>
+  </header>
+
+  <!-- Sudoku Grid -->
+  <main>
+    <div id="sudoku-board"></div>
+
+    <!-- Buttons -->
+    <div class="controls">
+      <button onclick="newGame()">New Game</button>
+      <button onclick="checkSolution()">Check Solution</button>
+    </div>
+
+    <!-- Result Message -->
+    <p id="message"></p>
+  </main>
+
+  <script src="script1.js"></script>
+</body>
+</html>
